@@ -1,33 +1,90 @@
-.App {
+.appcontainer{
+  padding-right:0px;
+  padding-left:0px;
+
+}
+.Main-Text{
+  background-image: url("https://www.kichler.com/globalassets/images/photography/2.-level-3-headers/1920x400/landscape-modernfarmhouse-wide-1920x400.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  width: 100%;
+  position: absolute;
+  height:25%;
+  margin: auto;
   text-align: center;
+
+}
+.inner{
+position: relative;
+ top: 10%;
+ left: 0%;
+ font-size: 1.5em;
+ color: #E30022;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.selling{
+position: fixed;
+ top: 50%;
+ left: 40%;
+ font-size: 1.5em;
+ color: black;
 }
+.sellpic{
+	position: fixed;
+	top: 25%;
+	left: 12%;
+ background-image:url("https://realtybiznews.com/wp-content/uploads/2019/08/20160524-Share-KCM.jpg");
+ background-size:cover;
+ width:75%;
+ height:55%;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.search-main{
+  position: absolute;
+}
+.search-right{
+  position: relative;
+  left: 25%;
+  width: 75%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.text-left{
+  padding-left: 0;
+}
+.houseinfo p{
+  padding-left: 1em;
+
+}
+.homecard h2{
+  padding-left: .5em;
+}
+.homecard img{
+  border-radius:.25em .25em 0px 0px;
+  }
+.homecard {
+  text-align: left;
+  background-color: black;
+  overflow-wrap:break-word;
+  word-wrap:break-word;
   color: white;
+  border-radius:.25em .25em .25em .25em;
+  width: 19.5em;
+  height: 21.5em;
+  margin-bottom: 1em;
+  margin-left: 2.5em;
 }
-
-.App-link {
-  color: #61dafb;
+.card-container{
+  width: 19.5em;
+  height: 21.5em;
 }
+.card-container:hover {
+  cursor: pointer;
+  border: solid .005em #FC5185;
+  transition: border-width 0.615s linear;
+}
+.Navbar {
+  background-color: black;
+  color:white;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
