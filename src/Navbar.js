@@ -1,48 +1,37 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 
-class Navbar extends Component {
+const Navbar =({handleChange}) => {
 	
-	constructor(props) {
-		super(props);
-		this.state={
-			lowval: '',
-			highval: ''
-		};
-	}
-	handleChange = ({target}) =>{
-		this.setState({ [target.name]: Number(target.value)});
-	};
 
-render() {
+
+
 	return(
 	<div className = "Navbar container-fluid">
 	 <div className="row">
 	 <div className = "col-xs-12">
 	 	<div className="Navbarform">
-	 <div className="homebutton">
+	 <div className="homebutton d-inline-flex">
 	   <Link to="/"><button className="btn btn-danger">Home</button>
 	   </Link>
 	 </div>
-	 	<form className="navigation">
+	 	<form className="navigation d-inline-flex">
 	 	Price:
 	 	 <input 
 	 	 className ="homevalue" 
 	 	 align="right" 
 	 	 type ="text" name="lowval" size ="5"
-	 	 value= {this.state.lowval}
-	 	 onChange = {this.handleChange}
+	 	 
+	 	 onChange = {handleChange}
 	 	 />
 	 	 To:
 	 	 <input 
 	 	 className="homevalue" 
 	 	 align="right" 
 	 	 type ="text" name="highval" size ="5"
-	 	 onChange = {this.handleChange}
-	 	 value= {this.state.highval}/>
+	 	 onChange = {handleChange}
+	 	 />
 	 	</form>
-	 	<h3> low:{this.state.lowval}
-	 	high: {this.state.highval} </h3>
 	 	</div>
 
 
@@ -50,7 +39,7 @@ render() {
 	 </div>
 	</div>
 	)
-}
+
 }
 
 export default Navbar;

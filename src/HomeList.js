@@ -1,30 +1,27 @@
 import React from 'react';
-import {Homesforsale} from './data.js';
 import Homecard from './Homecard';
 
-const HomeList =()=>{
+const HomeList =({Homes})=>{  /* Here we pass Homes that fall between a low and high price */
 
  return (
 	<div className="py-3">
-	 <div className="row mx-auto">
-	  
+	 <div className="row">  
 	{
-	 Homesforsale.map((homes, i)=>{
+	 Homes.map((homes, i)=>{
 	  return(
 	  	<Homecard
-	  	key = {Homesforsale[i].id}
-	  	name = {Homesforsale[i].name}
-	  	price = {Homesforsale[i].price}
-	  	img = {Homesforsale[i].img}
-	  	beds = {Homesforsale[i].beds}
-	  	baths = {Homesforsale[i].baths}
-	  	address = {Homesforsale[i].address}
-	  	sqft = {Homesforsale[i].sqft}
+	  	key = {Homes[i].id}
+	  	name = {Homes[i].name}
+	  	price = {Homes[i].price}
+	  	img = {Homes[i].img}
+	  	beds = {Homes[i].beds}
+	  	baths = {Homes[i].baths}
+	  	address = {Homes[i].address}
+	  	sqft = {Homes[i].sqft}
 	  	/>
 	  	)
 	 })
 	}
-	  
 	 </div>
 	</div>
  )

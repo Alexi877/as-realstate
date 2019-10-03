@@ -39,19 +39,8 @@ position: fixed;
  height:55%;
 
 }
-.search-main{
-  position: absolute;
-}
-.search-right{
-  position: relative;
-  left: 25%;
-  width: 75%;
-  padding-left: 0;
-  padding-right: 0;
-}
-.text-left{
-  padding-left: 0;
-}
+
+
 .houseinfo p{
   padding-left: 1em;
 
@@ -63,7 +52,6 @@ position: fixed;
   border-radius:.25em .25em 0px 0px;
   }
 .homecard {
-  text-align: left;
   background-color: black;
   overflow-wrap:break-word;
   word-wrap:break-word;
@@ -72,19 +60,26 @@ position: fixed;
   width: 19.5em;
   height: 21.5em;
   margin-bottom: 1em;
-  margin-left: 2.5em;
+  margin-left: 2.25em;
+  margin-right:0em;
 }
 .card-container{
+  text-align: left;
   width: 19.5em;
   height: 21.5em;
 }
 .card-container:hover {
   cursor: pointer;
-  border: solid .005em #FC5185;
-  transition: border-width 0.615s linear;
+  border: solid .00075em #FC5185;
+  transition: border-width 0.615s;
+  border-radius:.25em .25em .25em .25em;
 }
 .Navbar {
   background-color: black;
   color:white;
 
+}
+
+.gogl-map{
+  padding-left: 0;
 }

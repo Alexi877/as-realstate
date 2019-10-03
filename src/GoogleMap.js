@@ -3,15 +3,15 @@ import {Map, GoogleApiWrapper, Marker} from 'google-maps-react';
 
 
 const mapStyles = {
-		width: '25%',
-		height: '50%'
+		width: '100%',
+		height: '450px'
 	}
 class GoogleMap extends Component {
 	render() {
 	return (
 	<div className = "container-fluid">
 	 <div className ="row">
-		<div className = "col-xs-4">
+		<div className = "text-center">
 		<h1> Google Maps </h1>
 			<Map
           google={this.props.google}

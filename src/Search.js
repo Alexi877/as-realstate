@@ -2,29 +2,46 @@ import React, {Component} from 'react';
 import GoogleMap from './GoogleMap';
 import Navbar from './Navbar';
 import HomeList from './HomeList';
-import {lowval, highval} from './Navbar'; // use context api instead
-
+import {Homes} from './data.js';
 
 class Search extends Component {
-	render() {
-		const {lowval, highval} = this.props;
-	return (
-	<div className = "search-main container-fluid">
-		<div className="row" >
-		<Navbar />
-		<div className = "text-left col-xs-4 ">
-		
-			<GoogleMap /> 
 
-		 </div>
-		  <div className="row d-inline-flex">
-		 <div className = "search-right col-xs-8">
-		<HomeList />
+	constructor() {
+		super();
+		this.state={
+			lowval: '',
+			highval: '',
+			homes: Homes
+		};
+	}
+/*onHandleChange is a callback handler, which notifies the parent of changes in the child component */
+	onHandleChange = ({target}) =>{
+		this.setState({ [target.name]: target.value});
+	};
+	
+	
+	render() {
+		const {homes, lowval, highval} = this.state;
+		const rangedHomes = homes.filter(home => { /* begin with home.price to compare values as a price in between won't work */
+		if (lowval.length>=0 && highval.length>0 ) {
+		return home.price <= highval && home.price >= lowval;
+	} else {
+		return (homes);
+	}
+	})
+	return (
+	<div className = "container-fluid">
+		<div className="row" >
+		{/*<h1>low: {this.state.lowval}</h1>
+		<h1>high: {this.state.highval}</h1> */}
+		<Navbar className = "col-12" handleChange = {this.onHandleChange} /> 
+		<div className = "gogl-map col-3">
+			<GoogleMap /> 
+		 </div>	  
+		 <div className = "col-9">
+		<HomeList Homes = {rangedHomes} />
 		</div>
-		 </div>
-		 </div>
-		
-	 
+		 </div>	 
 	</div>
 	);
 	}

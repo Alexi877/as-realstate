@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 function Home() {
   return (
     <div className="appcontainer container-fluid">
-     <div clasName = "row">
+     <div className = "row">
       <div className="col-xs-12">
        <div className = "Main-Text">
         <div className = "inner">
