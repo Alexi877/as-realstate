@@ -3,7 +3,7 @@ import React from 'react';
 
 const Homecard = ({price,beds,baths,address,img, adress, sqft, id}) => {
 	return(
-	<div className="homecard container">
+	<div className="homecard container mx-auto">
 	 <div className = "row">
 	  <div className ="card-container">	   
 	<img src= {img}

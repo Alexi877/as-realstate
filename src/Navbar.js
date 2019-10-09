@@ -9,14 +9,18 @@ const Navbar =({handleChange}) => {
 	return(
 	<div className = "Navbar container-fluid">
 	 <div className="row">
-	 <div className = "col-xs-12">
+	 <div className = "col-2">
 	 	<div className="Navbarform">
 	 <div className="homebutton d-inline-flex">
 	   <Link to="/"><button className="btn btn-danger">Home</button>
 	   </Link>
 	 </div>
-	 	<form className="navigation d-inline-flex">
-	 	Price:
+	 </div>
+	 </div>
+	 	<div className="col-10 text-right">
+	 	<form className="navigation form-horizontal d-inline-flex"> 
+	 	<label>Searh by Price: Low</label>
+	 	 <div className="form-inline">
 	 	 <input 
 	 	 className ="homevalue" 
 	 	 align="right" 
@@ -24,20 +28,21 @@ const Navbar =({handleChange}) => {
 	 	 
 	 	 onChange = {handleChange}
 	 	 />
-	 	 To:
+	 	 <label>High:</label>
 	 	 <input 
 	 	 className="homevalue" 
 	 	 align="right" 
 	 	 type ="text" name="highval" size ="5"
 	 	 onChange = {handleChange}
 	 	 />
+	 	 </div>
 	 	</form>
+	 	</div>
 	 	</div>
 
 
 	 </div>
-	 </div>
-	</div>
+	 
 	)
 
 }
