@@ -24,7 +24,7 @@ const Navbar =({handleChange}) => {
 	 	 <input 
 	 	 className ="homevalue" 
 	 	 align="right" 
-	 	 type ="text" name="lowval" size ="5"
+	 	 type ="text" name="lowval" size ="2"
 	 	 
 	 	 onChange = {handleChange}
 	 	 />
@@ -32,7 +32,7 @@ const Navbar =({handleChange}) => {
 	 	 <input 
 	 	 className="homevalue" 
 	 	 align="right" 
-	 	 type ="text" name="highval" size ="5"
+	 	 type ="text" name="highval" size ="2"
 	 	 onChange = {handleChange}
 	 	 />
 	 	 </div>

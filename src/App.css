@@ -47,6 +47,9 @@ position: fixed;
   border-radius:.25em .25em 0px 0px;
   }
 .homecard {
+  position:relative;
+  width:66%;
+  max-width:360px;
   background-color: black;
   overflow-wrap:break-word;
   word-wrap:break-word;
@@ -59,9 +62,17 @@ position: fixed;
   margin-right:0em;
 }
 .card-container{
+ position:relative;
+  width:100%;
+  max-width:360px;
   text-align: left;
   width: 19.5em;
   height: 21.5em;
+}
+.card-container img{
+display:block;
+width:100%;
+height: auto;
 }
 .card-container:hover {
   cursor: pointer;
@@ -82,4 +93,7 @@ position: fixed;
   background-color: white;
   margin-right:15em;
   border-radius:.25em;
+}
+.navigation{
+  font-size:16px;
 }
