@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import GoogleMap from './GoogleMap';
 import Navbar from './Navbar';
 import HomeList from './HomeList';
-import {Homes} from './data.js';
+import {Homes} from '../data.js';
 
 class Search extends Component {
 
