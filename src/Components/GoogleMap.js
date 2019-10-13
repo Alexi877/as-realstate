@@ -11,7 +11,7 @@ class GoogleMap extends Component {
 	return (
 	<div className = "container-fluid">
 	 <div className ="row">
-		<div className = "text-center">
+		<div className = "google-text text-center">
 		<h1> Google Maps </h1>
 			<Map
           google={this.props.google}

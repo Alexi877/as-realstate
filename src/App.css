@@ -48,18 +48,19 @@ position: fixed;
   }
 .homecard {
   position:relative;
-  width:66%;
+  width:100%;
   max-width:360px;
   background-color: black;
   overflow-wrap:break-word;
   word-wrap:break-word;
   color: white;
   border-radius:.25em .25em .25em .25em;
-  width: 19.5em;
+  width: 16.5em;
   height: 21.5em;
   margin-bottom: 1em;
   margin-left: 2.5em;
   margin-right:0em;
+  overflow:auto;
 }
 .card-container{
  position:relative;
@@ -96,4 +97,7 @@ height: auto;
 }
 .navigation{
   font-size:16px;
+}
+.google-text h1{
+font-size: 27px;
 }
