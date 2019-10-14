@@ -19,21 +19,22 @@ const Navbar =({handleChange}) => {
 	 </div>
 	 	<div className="col-10 text-right">
 	 	<form className="navigation form-horizontal d-inline-flex"> 
-	 	<label>Search by Price: Low</label>
+	 	<label>Search by Price:</label>
 	 	 <div className="form-inline">
 	 	 <input 
 	 	 className ="homevalue" 
 	 	 align="right" 
 	 	 type ="text" name="lowval" size ="2"
-	 	 
 	 	 onChange = {handleChange}
+	 	 placeholder = "Low"
 	 	 />
-	 	 <label>High:</label>
+	 	 <label>To</label>
 	 	 <input 
 	 	 className="homevalue" 
 	 	 align="right" 
 	 	 type ="text" name="highval" size ="2"
 	 	 onChange = {handleChange}
+	 	 placeholder ="High"
 	 	 />
 	 	 </div>
 	 	</form>
