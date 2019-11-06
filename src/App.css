@@ -1,5 +1,5 @@
 .Main-Text{
-  background-image: url("https://www.kichler.com/globalassets/images/photography/2.-level-3-headers/1920x400/landscape-modernfarmhouse-wide-1920x400.jpg");
+  background-image: url("/img/farmhouse.png");
   background-repeat:no-repeat;
   background-size:cover;
   width: 100%;
@@ -28,7 +28,7 @@ position: fixed;
 	position: fixed;
 	top: 25%;
 	left: 12%;
- background-image:url("https://realtybiznews.com/wp-content/uploads/2019/08/20160524-Share-KCM.jpg");
+ background-image:url("/img/savings.png");
  background-size:cover;
  width:75%;
  height:55%;
