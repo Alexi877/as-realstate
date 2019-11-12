@@ -9,9 +9,9 @@ const mapStyles = {
 class GoogleMap extends Component {
 	render() {
 	return (
-	<div className = "container-fluid">
-	 <div className ="row">
-		<div className = "google-text text-center">
+	<div className="container-fluid">
+	 <div className="row">
+		<div className="google-text">
 		<h1> Google Maps </h1>
 			<Map
           google={this.props.google}
@@ -30,5 +30,5 @@ class GoogleMap extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyDVCQ0ggmeQEZSowlPlb7IcvXN13Abb3Do'
+  apiKey: 'nah'
 }) (GoogleMap);

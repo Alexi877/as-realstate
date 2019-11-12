@@ -3,6 +3,7 @@ import GoogleMap from './GoogleMap';
 import Navbar from './Navbar';
 import HomeList from './HomeList';
 import {Homes} from '../data.js';
+import DropDown from './DropDown.js'
 
 class Search extends Component {
 
@@ -11,15 +12,43 @@ class Search extends Component {
 		this.state={
 			lowval: '',
 			highval: '',
-			homes: Homes
+			homes: Homes,
+			drop:false,
+			beds: '',
+			baths: '',
+			squarefeet:'',
+			location:'',
+			addedfilter:''
 		};
 	}
 /*onHandleChange is a callback handler, which notifies the parent of changes in the child component */
 	onHandleChange = ({target}) =>{
 		this.setState({ [target.name]: target.value});
 	};
-	
-	
+	onHandleBeds = ({target}) =>{
+		this.setState({ beds: target.value});
+	};
+	onHandleBaths = ({target}) =>{
+		this.setState({ baths: target.value});
+	};
+	onHandleSqft = ({target}) =>{
+		this.setState({ squarefeet: target.value});
+	};
+	onHandleLocation = ({target}) =>{
+		this.setState({ location: target.value});
+	};
+	onHandleFilter = ({target}) =>{
+		this.setState({ addedfilter: target.value});
+	};
+	onDropFilterChange = (addedfilter) => {
+		if (addedfilter === 'open') {
+			this.setState({drop: true})
+		} else if (addedfilter === 'close') {
+			this.setState({drop: false})
+		}
+		this.setState({addedfilter:addedfilter})
+	}
+
 	render() {
 		const {homes, lowval, highval} = this.state;
 		const rangedHomes = homes.filter(home => { /* begin with home.price to compare values as a price in between won't work */
@@ -32,13 +61,20 @@ class Search extends Component {
 	return (
 	<div className = "container-fluid">
 		<div className="row" >
-		{/*<h1>low: {this.state.lowval}</h1>
-		<h1>high: {this.state.highval}</h1> */}
-		<Navbar className = "col-12" handleChange = {this.onHandleChange} /> 
-		<div className = "gogl-map col-3">
+		<Navbar className = "col-12" handleFilter={this.onDropFilterChange} handleChange = {this.onHandleChange}
+		 /> 
+		<div className = "gogl-map d-none d-sm-block col-3">
 			<GoogleMap /> 
 		 </div>	  
 		 <div className = "col-9">
+		 { this.state.drop ? (
+		 <DropDown handleBed={this.onHandleBeds} 
+		 handleBath={this.onHandleBaths}
+		 handleSqft={this.onHandleSqft}
+		 handleLocation={this.onHandleLocation}
+		 handleFilter={this.onDropFilterChange}
+		 />) : ('')
+		 	}
 		<HomeList Homes = {rangedHomes} />
 		</div>
 		 </div>	 

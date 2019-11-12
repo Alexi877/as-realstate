@@ -4,7 +4,7 @@
   background-size:cover;
   width: 100%;
   position: absolute;
-  height:25%;
+  height:50%;
   margin: auto;
   text-align: center;
 
@@ -18,20 +18,23 @@ position: relative;
 }
 
 .selling{
-position: fixed;
- top: 50%;
- left: 40%;
+position: relative;
+ margin-right:auto!important;
+  margin-left:auto!important;
  font-size: 1.5em;
  color: black;
+ max-width:200px;
+ margin-top:80px;
 }
 .sellpic{
 	position: fixed;
-	top: 25%;
+	top: 50%;
 	left: 12%;
  background-image:url("/img/savings.png");
  background-size:cover;
  width:75%;
  height:55%;
+
 
 }
 
@@ -86,7 +89,27 @@ height: auto;
   color:white;
   padding-left:0;
 }
-
+.navigation label{
+  margin-bottom:0;
+  padding-top:3px;
+}
+.homevalue{
+  
+  background:none;
+  color:white;
+  border:0;
+border-bottom:1px solid grey;
+}
+.filtervalue{
+  background:none;
+  color:white;
+  border:none;
+  padding:0 7px 0px 0px;
+}
+.filtervalue:hover {
+  color:red;
+  text-decoration:underline grey;
+  }
 .gogl-map{
   padding-left: 0;
 }
@@ -98,6 +121,27 @@ height: auto;
 .navigation{
   font-size:16px;
 }
-.google-text h1{
-font-size: 27px;
+.google-text {
+font-size: 16px;
+text-align: center;
+}
+.extrafilters{
+padding:5px;
+border:0;
+border-bottom:1px solid grey;
+border-radius:3px;
+color:white;
+background:none;
+border-color:grey;
+}
+.dropdown{
+  color:white;
+  margin:0 auto;
+  background:black;
+  border-radius: 0px 0px 5px 5px;
+  padding:15px 0px;
+  border:1px solid grey;
+}
+.filterblock{
+  display:block;
 }
