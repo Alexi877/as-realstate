@@ -47,7 +47,7 @@ const DropDown =({handleBed, handleBath, handleSqft, handleLocation, handleFilte
 	 	 </div>
 	 	 <div className="filterblock">
 	 	 <input 
-	 	 className ="extrafilters" 
+	 	 className ="closefilters" 
 	 	 align="right" 
 	 	 type ="button" name="addedfilter" value="close" size ="4"
 	 	 placeholder = "location"

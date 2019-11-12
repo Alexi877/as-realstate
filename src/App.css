@@ -107,7 +107,7 @@ border-bottom:1px solid grey;
   padding:0 7px 0px 0px;
 }
 .filtervalue:hover {
-  color:red;
+  color:#E30022;
   text-decoration:underline grey;
   }
 .gogl-map{
@@ -144,4 +144,15 @@ border-color:grey;
 }
 .filterblock{
   display:block;
+}
+.closefilters{
+border:0;
+color:white;
+background:none;
+border-color:grey;
+}
+.closefilters:hover{
+border-bottom:1px solid grey;
+border-radius:3px;
+color:#E30022;
 }
