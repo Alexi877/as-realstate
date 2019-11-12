@@ -61,7 +61,7 @@ class Search extends Component {
 	} else if(squarefeet.length>0){
 		return home.sqft>= squarefeet;
 	} else if(location.length>0){
-		return home.address.includes(location);
+		return home.address.toLowerCase().includes(location.toLowerCase());
 	}
 	else {
 		return (homes);
