@@ -50,11 +50,20 @@ class Search extends Component {
 	}
 
 	render() {
-		const {homes, lowval, highval} = this.state;
+		const {homes, lowval, highval, beds, baths, squarefeet, location} = this.state;
 		const rangedHomes = homes.filter(home => { /* begin with home.price to compare values as a price in between won't work */
 		if (lowval.length>=0 && highval.length>0 ) {
 		return home.price <= highval && home.price >= lowval;
-	} else {
+	} else if(beds.length>0){
+		return home.beds>= beds;
+	} else if(baths.length>0){
+		return home.baths>= baths;
+	} else if(squarefeet.length>0){
+		return home.sqft>= squarefeet;
+	} else if(location.length>0){
+		return home.address.includes(location);
+	}
+	else {
 		return (homes);
 	}
 	})
