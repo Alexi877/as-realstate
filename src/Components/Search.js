@@ -11,14 +11,16 @@ class Search extends Component {
 		super();
 		this.state={
 			lowval: '',
-			highval: '',
+			highval: '10000000',
 			homes: Homes,
 			drop:false,
 			beds: '',
 			baths: '',
 			squarefeet:'',
 			location:'',
-			addedfilter:''
+			addedfilter:'',
+			sortby: '',
+			sort: ''
 		};
 	}
 /*onHandleChange is a callback handler, which notifies the parent of changes in the child component */
@@ -40,6 +42,9 @@ class Search extends Component {
 	onHandleFilter = ({target}) =>{
 		this.setState({ addedfilter: target.value});
 	};
+	onHandleSort = ({target}) => {
+		this.setState({sortby: target.value});
+	};
 	onDropFilterChange = (addedfilter) => {
 		if (addedfilter === 'open') {
 			this.setState({drop: true})
@@ -51,33 +56,45 @@ class Search extends Component {
 
 	render() {
 		const {homes, lowval, highval, beds, baths, squarefeet, location} = this.state;
-		const rangedHomes = homes.filter(home => { /* begin with home.price to compare values as a price in between won't work */
-		if (lowval.length>=0 && highval.length>0 ) {
-		return home.price <= highval && home.price >= lowval;
-	} else if(beds.length>0){
-		return home.beds>= beds;
-	} else if(baths.length>0){
-		return home.baths>= baths;
-	} else if(squarefeet.length>0){
-		return home.sqft>= squarefeet;
-	} else if(location.length>0){
-		return home.address.toLowerCase().includes(location.toLowerCase());
-	}
-	else {
+		let rangedHomes = homes.filter(home => { /* begin with home.price to compare values as a price in between won't work */
+		if (lowval.length>=0 && highval.length>0 && beds.length>=0 && baths.length>=0 && squarefeet.length>=0 && location.length>=0) {
+		return home.price <= highval && home.price >= lowval && home.beds>= beds && home.baths>= baths && home.sqft>= squarefeet && home.address.toLowerCase().includes(location.toLowerCase());
+	} else {
 		return (homes);
 	}
 	})
+	// Conditional Statements for select option
+	if(this.state.sortby === 'price' ) {
+		rangedHomes = rangedHomes.sort((a, b) => {
+			return a.price >= b.price;
+		})
+	}  else if(this.state.sortby === 'beds' ) {
+		rangedHomes = rangedHomes.sort((a, b) => {
+			return a.beds >= b.beds;
+		})
+	}  else if(this.state.sortby === 'sqft' ) {
+		rangedHomes = rangedHomes.sort((a, b) => {
+			return a.sqft >= b.sqft;
+		})
+	} else if(this.state.sortby === 'clear' ) {
+		rangedHomes = rangedHomes.sort((a, b) => {
+			return a.id >= b.id;
+		})
+	}
+
 	return (
 	<div className = "container-fluid">
 		<div className="row" >
-		<Navbar className = "col-12" handleFilter={this.onDropFilterChange} handleChange = {this.onHandleChange}
+		<Navbar className = "col-12" sortby={this.state.sortby} handleSort={this.onHandleSort} handleFilter={this.onDropFilterChange} handleChange = {this.onHandleChange}
 		 /> 
 		<div className = "gogl-map d-none d-sm-block col-3">
 			<GoogleMap /> 
 		 </div>	  
-		 <div className = "col-9">
+		 <div className = "col-md-9 col-sm-9 col-12">
 		 { this.state.drop ? (
-		 <DropDown handleBed={this.onHandleBeds} 
+		 <DropDown
+		 handleChange = {this.onHandleChange} 
+		 handleBed={this.onHandleBeds} 
 		 handleBath={this.onHandleBaths}
 		 handleSqft={this.onHandleSqft}
 		 handleLocation={this.onHandleLocation}

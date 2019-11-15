@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const Navbar =({handleChange, handleFilter}) => {
+const Navbar =({handleFilter, handleSort, sortby}) => {
 	
 
 
@@ -19,34 +19,21 @@ const Navbar =({handleChange, handleFilter}) => {
 	 </div>
 	 	<div className="col-10">
 	 	<div className="text-right">
-	 	<form className="navigation form-horizontal d-inline-flex">
-	 		 	<input 
+
+	 	<select className ="selectsort"  value={sortby} onChange={handleSort}>
+	 	<option className="sortoption" selected={true} disabled={true} value="">Sort</option>
+	 	<option value="clear">Clear</option>
+	 	<option value="price">Price</option>
+	 	<option value="beds">Beds</option>
+	 	<option value="sqft">Sq Ft</option>
+	 	</select>
+	 	<input 
 	 	 className ="filtervalue" 
 	 	 align="left" 
 	 	 type ="button" name="addedfilter" value="+filters" size ="2"
 	 	 onClick={() => handleFilter('open')}
 	 	 placeholder = "Low"
 	 	 />
- 
-	 	<label>Search by Price:</label>
-	 	 <div className="form-inline">
-	 	 <input 
-	 	 className ="homevalue" 
-	 	 align="right" 
-	 	 type ="text" name="lowval" size ="2"
-	 	 onChange = {handleChange}
-	 	 placeholder = "Low"
-	 	 />
-	 	 <label>To</label>
-	 	 <input 
-	 	 className="homevalue" 
-	 	 align="right" 
-	 	 type ="text" name="highval" size ="2"
-	 	 onChange = {(handleChange)}
-	 	 placeholder ="High"
-	 	 />
-	 	 </div>
-	 	</form>
 	 	</div>
 	 	</div>
 	 	</div>

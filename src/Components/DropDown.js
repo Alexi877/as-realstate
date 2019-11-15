@@ -1,9 +1,31 @@
 import React from 'react';
 
-const DropDown =({handleBed, handleBath, handleSqft, handleLocation, handleFilter})=>{
+const DropDown =({handleBed, handleBath, handleSqft, handleLocation, handleFilter, handleChange})=>{
 	return(
 		<div className="dropdown text-center">
 		<div>
+		<form className="navigation form-horizontal d-inline-flex">
+
+ 
+	 	<label>Search by Price:</label>
+	 	 <div className="form-inline">
+	 	 <input 
+	 	 className ="homevalue" 
+	 	 align="right" 
+	 	 type ="text" name="lowval" size ="2"
+	 	 onChange = {handleChange}
+	 	 placeholder = "Low"
+	 	 />
+	 	 <label>To</label>
+	 	 <input 
+	 	 className="homevalue" 
+	 	 align="right" 
+	 	 type ="text" name="highval" size ="2"
+	 	 onChange = {(handleChange)}
+	 	 placeholder ="High"
+	 	 />
+	 	 </div>
+	 	</form>
 		<form>
 		<div className="filterblock">
 		<label>Beds:</label>
