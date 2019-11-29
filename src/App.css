@@ -169,3 +169,33 @@ color:#E30022;
   cursor:pointer;
   border-bottom:1px solid grey;
 }
+.navbar-column{
+  padding:0;
+}
+.signin-background{
+  background:#FCFCFC;
+  height:720px;
+}
+.signin-form{
+
+  width:360px;
+  text-align:center;
+}
+.signin-form .inner-signin{
+  margin-top:18em;
+  background:black;
+  color:white;
+  border-radius:1em;
+}
+.inner-signin .email{
+padding:0 0 0 27px;
+}
+.signin-form button{
+border:none;
+background:none;
+color:white;
+}
+.signin-form button:hover{
+color:#399bff;
+text-decoration: underline;
+  }

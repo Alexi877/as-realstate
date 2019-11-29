@@ -17,7 +17,7 @@ const Navbar =({handleFilter, handleSort, sortby}) => {
 	 </div>
 	 </div>
 	 </div>
-	 	<div className="col-10">
+	 	<div className="col-10 navbar-column">
 	 	<div className="text-right">
 
 	 	<select className ="selectsort"  value={sortby} onChange={handleSort}>
@@ -32,12 +32,15 @@ const Navbar =({handleFilter, handleSort, sortby}) => {
 	 	 align="left" 
 	 	 type ="button" name="addedfilter" value="+filters" size ="2"
 	 	 onClick={() => handleFilter('open')}
-	 	 placeholder = "Low"
+	 	
 	 	 />
+	 	 <div className="signin-button d-inline-flex">
+	   <Link to="/signin"><button className="btn btn-primary">Sign in</button>
+	   </Link>
+	 </div>
 	 	</div>
 	 	</div>
 	 	</div>
-
 
 	 </div>
 	 

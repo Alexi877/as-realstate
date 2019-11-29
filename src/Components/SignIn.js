@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-const SignUp = () => {
+const SignIn = () => {
 	return(
 		<div className="signin-background" >
 		<div className="container-fluid signin-form">
@@ -17,18 +17,12 @@ const SignUp = () => {
 		<label>Password </label>
 		<input className="password" type="text" name="password"/>
 		</div>
-		<div>
-		<label>Password </label>
-		<input className="password" type="text" name="password"
-		placeholder="Re-type Password"
-		/>
-		</div>
 		</form>
-		<label>Back to </label>
-		<Link to="/signin"><button>Signin</button>
+		<label>Don't have an account?</label>
+		<Link to="/signup"><button>Signup</button>
 		</Link>
 		<div>
-		<Link to="/search"><button>Back to Home search</button>
+		<Link to="/search"><button>Go Back</button>
 		</Link>
 		</div> 
 		   </div>
@@ -38,5 +32,4 @@ const SignUp = () => {
 		</div>
 		)
 }
-
-export default SignUp;
+export default SignIn;
