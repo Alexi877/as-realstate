@@ -64,21 +64,22 @@ class Search extends Component {
 	}
 	})
 	// Conditional Statements for select option
+	// a-b is the same as a>=b to sort in ascendign order for chrome.
 	if(this.state.sortby === 'price' ) {
 		rangedHomes = rangedHomes.sort((a, b) => {
-			return a.price >= b.price;
+			return a.price - b.price;
 		})
 	}  else if(this.state.sortby === 'beds' ) {
 		rangedHomes = rangedHomes.sort((a, b) => {
-			return a.beds >= b.beds;
+			return a.beds - b.beds;
 		})
 	}  else if(this.state.sortby === 'sqft' ) {
 		rangedHomes = rangedHomes.sort((a, b) => {
-			return a.sqft >= b.sqft;
+			return a.sqft - b.sqft;
 		})
 	} else if(this.state.sortby === 'clear' ) {
 		rangedHomes = rangedHomes.sort((a, b) => {
-			return a.id >= b.id;
+			return a.id - b.id;
 		})
 	}
 

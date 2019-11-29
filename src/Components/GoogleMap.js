@@ -13,7 +13,7 @@ class GoogleMap extends Component {
 	 <div className="row">
 		<div className="google-text">
 		<h1> Google Maps </h1>
-			<Map
+			<Map 
           google={this.props.google}
           zoom={13}
           style={mapStyles}

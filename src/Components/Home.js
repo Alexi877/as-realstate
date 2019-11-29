@@ -8,7 +8,7 @@ function Home() {
      <div className = "row">
       <div className="Main-Text col-12">
         <div className = "inner">
-       <h3 >Ready to start your home search? </h3>
+       <h3>Ready to start your home search? </h3>
        <Link to="/search"><button className="btn btn-danger">Get Started</button></Link>
         </div>
         </div>

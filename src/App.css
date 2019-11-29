@@ -162,6 +162,7 @@ color:#E30022;
   background:none;
   color:white;
   border:0;
+  padding-right:7px;
 }
 .selectsort:hover{
   color: red;
