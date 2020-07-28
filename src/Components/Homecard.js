@@ -1,9 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 
-const Homecard = ({price,beds,baths,address,img, adress, sqft, id}) => {
+const Homecard = ({price,beds,baths,address,img, sqft, id}) => {
 	return(
 	<div className="homecard container mx-auto">
+	 <Link className='link' to={`/details/${id}`}>
 	 <div className = "row">
 	  <div className ="card-container">	   
 	<img src= {img}
@@ -11,7 +13,7 @@ const Homecard = ({price,beds,baths,address,img, adress, sqft, id}) => {
 	height="212" 
 	width="311.5"
 	/>
-	<h2>${price}</h2>
+	<h2 className="price">${price}</h2>
 	 <div className="houseinfo d-inline-flex"> 
 	<p>{beds} Beds</p>
 	<p>{baths} Baths</p>
@@ -20,6 +22,7 @@ const Homecard = ({price,beds,baths,address,img, adress, sqft, id}) => {
 	<p>{address}</p>	  
 	  </div>
 	 </div>
+	 </Link>
 	</div>
 	);
 }

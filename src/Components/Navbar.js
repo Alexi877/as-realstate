@@ -1,9 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const Navbar =({handleFilter, handleSort, sortby}) => {
+const Navbar =({handleFilter, handleSort, sortby, showFilter}) => {
 	
-
 
 
 	return(
@@ -19,9 +18,10 @@ const Navbar =({handleFilter, handleSort, sortby}) => {
 	 </div>
 	 	<div className="col-10 navbar-column">
 	 	<div className="text-right">
-
+		{ showFilter=='show'? (
+		 <div className='filters'>
 	 	<select className ="selectsort"  value={sortby} onChange={handleSort}>
-	 	<option className="sortoption" selected={true} disabled={true} value="">Sort</option>
+	 	<option className="sortoption" defaultValue disabled={true} value="">Sort</option>
 	 	<option value="clear">Clear</option>
 	 	<option value="price">Price</option>
 	 	<option value="beds">Beds</option>
@@ -32,8 +32,9 @@ const Navbar =({handleFilter, handleSort, sortby}) => {
 	 	 align="left" 
 	 	 type ="button" name="addedfilter" value="+filters" size ="2"
 	 	 onClick={() => handleFilter('open')}
-	 	
 	 	 />
+		 </div>
+		): ('')}
 	 	 <div className="signin-button d-inline-flex">
 	   <Link to="/signin"><button className="btn btn-primary">Sign in</button>
 	   </Link>

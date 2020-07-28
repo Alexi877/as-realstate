@@ -7,17 +7,18 @@ const HomeList =({Homes})=>{  /* Here we pass Homes that fall between a low and 
 	<div className="py-3">
 	 <div className="row">  
 	{
-	 Homes.map((homes, i)=>{
+	 Homes.map((homes)=>{
 	  return(
 	  	<Homecard
-	  	key = {Homes[i].id}
-	  	name = {Homes[i].name}
-	  	price = {Homes[i].price}
-	  	img = {Homes[i].img}
-	  	beds = {Homes[i].beds}
-	  	baths = {Homes[i].baths}
-	  	address = {Homes[i].address}
-	  	sqft = {Homes[i].sqft}
+	  	key = {homes.id}
+	  	name = {homes.name}
+	  	price = {homes.price}
+	  	img = {homes.img}
+	  	beds = {homes.beds}
+	  	baths = {homes.baths}
+	  	address = {homes.address}
+		  sqft = {homes.sqft}
+		  id={homes.id}
 	  	/>
 	  	)
 	 })

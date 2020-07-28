@@ -2,7 +2,7 @@ export const Homes = [
 	{
 	id: 1,
     address: "5601 Parker House Ter #412 Hyattsville, MD 20782",
-    img: "img/product-1.png",
+    img: "../img/product-1.png",
     price: 79899,
     beds: 1,
     baths: 1,
@@ -13,7 +13,7 @@ export const Homes = [
 	{
 	id: 2,
     address: "4018 Hamilton St Hyattsville, MD 20781",
-    img: "img/product-2.png",
+    img: "../img/product-2.png",
     price: 520000,
     beds: 4,
     baths: 3,
@@ -24,7 +24,7 @@ export const Homes = [
 	{
 	id: 3,
     address: "6630 23rd Ave Hyattsville, MD 20782",
-    img: "img/product-3.png",
+    img: "../img/product-3.png",
     price: 285000,
     beds: 4,
     baths: 2,
@@ -35,7 +35,7 @@ export const Homes = [
 	{
 	id: 4,
     address: "6000 36th Ave Hyattsville, MD 20782",
-    img: "img/product-4.png",
+    img: "../img/product-4.png",
     price: 369900,
     beds: 5,
     baths: 2,

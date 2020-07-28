@@ -37,11 +37,16 @@ position: relative;
 
 
 }
-
-
+body{
+  background-color: #FBFBFB;
+}
 .houseinfo p{
   padding-left: 1em;
 
+}
+.homecard .link{
+  color: white !important;
+  text-decoration: none !important;
 }
 .homecard h2{
   padding-left: .5em;
@@ -88,6 +93,9 @@ height: 190px;
   background-color: black;
   color:white;
   padding-left:0;
+}
+.Navbar .filters{
+  display:inline-block;
 }
 .navigation label{
   margin-bottom:0;
@@ -199,3 +207,24 @@ color:white;
 color:#399bff;
 text-decoration: underline;
   }
+.details-page .Navbar{
+padding:0;
+}
+.details-page img{
+  width: 665px;
+  height:440px;
+}
+.details-page .info{
+display: flex !important;
+}
+.details-page .info p{
+  margin-right: 5px;
+}
+.details-page .info span{
+color:darkgrey;
+}
+.details-page .description{
+  width: 50%;
+  color:grey;
+  font-size: 18px;
+}
