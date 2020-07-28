@@ -45,13 +45,8 @@ class Search extends Component {
 	onHandleSort = ({target}) => {
 		this.setState({sortby: target.value});
 	};
-	onDropFilterChange = (addedfilter) => {
-		if (addedfilter === 'open') {
-			this.setState({drop: true})
-		} else if (addedfilter === 'close') {
-			this.setState({drop: false})
-		}
-		this.setState({addedfilter:addedfilter})
+	onDropFilterChange = () => {
+		this.setState({drop:!this.state.drop})
 	}
 
 	render() {

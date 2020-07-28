@@ -31,7 +31,7 @@ const Navbar =({handleFilter, handleSort, sortby, showFilter}) => {
 	 	 className ="filtervalue" 
 	 	 align="left" 
 	 	 type ="button" name="addedfilter" value="+filters" size ="2"
-	 	 onClick={() => handleFilter('open')}
+	 	 onClick={() => handleFilter()}
 	 	 />
 		 </div>
 		): ('')}

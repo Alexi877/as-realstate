@@ -73,7 +73,7 @@ const DropDown =({handleBed, handleBath, handleSqft, handleLocation, handleFilte
 	 	 align="right" 
 	 	 type ="button" name="addedfilter" value="close" size ="4"
 	 	 placeholder = "location"
-	 	 onClick={() => handleFilter('close')}
+	 	 onClick={() => handleFilter()}
 	 	 />
 	 	 </div>
 		</form>
