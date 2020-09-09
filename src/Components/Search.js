@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import GoogleMap from './GoogleMap';
 import Navbar from './Navbar';
 import HomeList from './HomeList';
-import {Homes} from '../data.js';
 import DropDown from './DropDown.js'
+import {connect} from 'react-redux';
 
 class Search extends Component {
 
@@ -12,7 +12,6 @@ class Search extends Component {
 		this.state={
 			lowval: '',
 			highval: '10000000',
-			homes: Homes,
 			drop:false,
 			beds: '',
 			baths: '',
@@ -50,7 +49,8 @@ class Search extends Component {
 	}
 
 	render() {
-		const {homes, lowval, highval, beds, baths, squarefeet, location} = this.state;
+		const homes = this.props.homes;
+		const {lowval, highval, beds, baths, squarefeet, location} = this.state;
 		let rangedHomes = homes.filter(home => { /* begin with home.price to compare values as a price in between won't work */
 		if (lowval.length>=0 && highval.length>0 && beds.length>=0 && baths.length>=0 && squarefeet.length>=0 && location.length>=0) {
 		return home.price <= highval && home.price >= lowval && home.beds>= beds && home.baths>= baths && home.sqft>= squarefeet && home.address.toLowerCase().includes(location.toLowerCase());
@@ -105,4 +105,11 @@ class Search extends Component {
 	}
 }
 
-export default Search;
+const mapStateToProps = (state) =>{
+	console.log(state);
+	return state
+}
+
+
+
+export default connect(mapStateToProps)(Search);
