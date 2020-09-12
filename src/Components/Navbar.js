@@ -11,7 +11,7 @@ const Navbar =({handleFilter, handleSort, sortby, showFilter}) => {
 	 <div className = "col-2">
 	 	<div className="Navbarform">
 	 <div className="homebutton d-inline-flex">
-	   <Link to="/"><button className="btn btn-danger">Home</button>
+	   <Link to="/"><button className="home-button" title="home"><i className="fa fa-home fa-2x"></i></button>
 	   </Link>
 	 </div>
 	 </div>
@@ -27,16 +27,13 @@ const Navbar =({handleFilter, handleSort, sortby, showFilter}) => {
 	 	<option value="beds">Beds</option>
 	 	<option value="sqft">Sq Ft</option>
 	 	</select>
-	 	<input 
-	 	 className ="filtervalue" 
-	 	 align="left" 
-	 	 type ="button" name="addedfilter" value="+filters" size ="2"
-	 	 onClick={() => handleFilter()}
-	 	 />
+		<div className='filters-button'>
+		<button title="filters" onClick={() => handleFilter()}><i className="fa fa-filter"></i></button>
+		</div>
 		 </div>
 		): ('')}
 	 	 <div className="signin-button d-inline-flex">
-	   <Link to="/signin"><button className="btn btn-primary">Sign in</button>
+	   <Link to="/signin"><button className="sign-in" title="sign-in"><i className="fa fa-sign-in fa-2x"></i></button>
 	   </Link>
 	 </div>
 	 	</div>

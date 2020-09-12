@@ -13,7 +13,7 @@ const DropDown =({handleBed, handleBath, handleSqft, handleLocation, handleFilte
 	 	 className ="homevalue" 
 	 	 align="right" 
 	 	 type ="text" name="lowval" size ="2"
-	 	 onChange = {handleChange}
+	 	 onChange = {() =>handleChange()}
 	 	 placeholder = "Low"
 	 	 />
 	 	 <label>To</label>

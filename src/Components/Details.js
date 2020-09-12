@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {Homes} from '../data';
 import Navbar from './Navbar';
 import 'font-awesome/css/font-awesome.min.css';
+import {connect} from 'react-redux';
+import {addFavorite, removeFavorite} from '../redux/actions';
+
 
 class Details extends Component{
 	constructor(props) {
@@ -16,7 +19,9 @@ class Details extends Component{
 	setFavorite = (homeId) =>{
 		this.setState({
 			favorite:!this.state.favorite
-		}, this.homeFavorited(homeId));
+		}, 
+		this.homeFavorited(homeId));
+		this.props.addFavorite(homeId)
 
 	}
 	homeFavorited = (homeId)=>{
@@ -28,12 +33,11 @@ class Details extends Component{
 			this.setState({
 				favoriteId: null
 			})
-		}
+		};
+		
 		
 	}
-	componentDidMount () {
-		const {id} = this.props.match.params;
-	}
+	
 	render() {
 	let openHome = this.state.homes.filter(home =>{ 
 		return home.id == this.state.openId})[0];
@@ -58,14 +62,14 @@ class Details extends Component{
 		    <p><span>Beds</span> {openHome.beds}</p>
 		    <p><span>Baths</span> {openHome.baths}</p>
 		    <p><span>Squarefeet</span> {openHome.sqft}</p>
-			<button onClick={this.setFavorite.bind(null, openHome.id)} className="btn btn-warning">
-			{ this.state.favorite===true ?
-			<span className="fa fa-star fa-lg"> Favorited!</span> 
+			
+			{ this.props.favorites.includes(openHome.id) ?
+			<button onClick={() => this.props.removeFavorite(openHome.id)} className="btn btn-warning"><span className="fa fa-star fa-lg"> Favorited!</span></button>
 			:(
-				<span className="fa fa-star-o fa-lg"> Favorite</span>
+				<button onClick={this.setFavorite.bind(null, openHome.id)} className="btn btn-warning"><span className="fa fa-star-o fa-lg"> Favorite</span> </button>
 			)
 			}
-			</button>
+			
 		    </div>
 		   <p className='description'>Description: {openHome.info}</p>
 		   </div>
@@ -75,4 +79,13 @@ class Details extends Component{
 		)
 	}
 }
-export default Details;
+const mapStateToProps = (state) =>{
+	console.log(state);
+	return state
+}
+const mapDispatchToProps = {
+	addFavorite: addFavorite,
+	removeFavorite: removeFavorite
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Details);

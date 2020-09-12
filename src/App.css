@@ -93,9 +93,46 @@ height: 190px;
   background-color: black;
   color:white;
   padding-left:0;
+  width: 100%;
+  display: table;
 }
+.homebutton button{
+  background-color:black !important; /* Green */
+  border: none;
+  color: red;
+  padding: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align:middle;
+  font-size: 19px;
+  outline:none;
+}
+.filters-button{
+  display:inline-block;
+  vertical-align:middle;
+}
+.filters-button button{
+  vertical-align: middle;
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 19px;
+  padding: none;
+  outline:none;
+}
+.signin-button button{
+  color: #399bff !important;
+  background-color: black;
+  border: none;
+  font-size: 19px;
+  vertical-align:middle;
+  outline:none;
+}
+
 .Navbar .filters{
   display:inline-block;
+  vertical-align: middle;
 }
 .navigation label{
   margin-bottom:0;
@@ -208,7 +245,7 @@ color:#399bff;
 text-decoration: underline;
   }
 .details-page .Navbar{
-padding:0;
+
 }
 .details-page img{
   width: 665px;
