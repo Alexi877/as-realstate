@@ -47,7 +47,7 @@ class Details extends Component{
 		<div className="container-fluid details-page">
 		 <div className='row'>
 		  <div className='col-12 Navbar'>
-		   <Navbar showFilter={`Don't show`}/>
+		   <Navbar showFilter={`Don't show`} showSignIn={'show'}/>
 		  </div>
 		 </div>
 		 <div className="row">
