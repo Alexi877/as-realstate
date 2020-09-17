@@ -81,7 +81,13 @@ class Search extends Component {
 	return (
 	<div className = "container-fluid">
 		<div className="row" >
-		<Navbar className = "col-12" sortby={this.state.sortby} handleSort={this.onHandleSort} handleFilter={this.onDropFilterChange} handleChange = {this.onHandleChange} showFilter={'show'}
+		<Navbar className = "col-12" 
+		sortby={this.state.sortby} 
+		handleSort={this.onHandleSort} 
+		handleFilter={this.onDropFilterChange} 
+		handleChange = {this.onHandleChange} 
+		showFilter={'show'} 
+		showSignIn={'show'}
 		 /> 
 		<div className = "gogl-map d-none d-sm-block col-3">
 			<GoogleMap /> 

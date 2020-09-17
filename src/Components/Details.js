@@ -43,7 +43,6 @@ class Details extends Component{
 		return home.id == this.state.openId})[0];
 	//we add [0] so it returns the object in the array alone outside an array
 	let homeid=this.state.favoriteId;
-	console.log('state is' + this.state.favoriteId + this.state.favorite);
 	return(
 		<div className="container-fluid details-page">
 		 <div className='row'>

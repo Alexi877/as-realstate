@@ -1,11 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Navbar from './Navbar';
 const SignUp = () => {
 	return(
 		<div className="signin-background" >
 		<div className="container-fluid signin-form">
 		 <div className="row">
-		 
+		 <div className="col-12">
+			 <Navbar/>
+		 </div>
 		  <div className="col-12">
 		   <div className="inner-signin">
 		<form>
@@ -24,13 +27,12 @@ const SignUp = () => {
 		/>
 		</div>
 		</form>
+		<div>
+		<button className="signupSubmit">Sign up</button>
+		</div>
 		<label>Back to </label>
 		<Link to="/signin"><button>Signin</button>
 		</Link>
-		<div>
-		<Link to="/search"><button>Back to Home search</button>
-		</Link>
-		</div> 
 		   </div>
 		  </div>
 		 </div>

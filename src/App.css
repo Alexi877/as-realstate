@@ -9,6 +9,14 @@
   text-align: center;
 
 }
+.home-nav-row{
+  margin-left: -30px;
+  margin-right: -30px;
+}
+.Home-nav{
+margin: 0;
+width:100%;
+}
 .inner{
 position: relative;
  top: 10%;
@@ -28,7 +36,7 @@ position: relative;
 }
 .sellpic{
 	position: fixed;
-	top: 50%;
+	top: 60%;
 	left: 12%;
  background-image:url("/img/savings.png");
  background-size:cover;
@@ -217,9 +225,24 @@ color:#E30022;
 .navbar-column{
   padding:0;
 }
+.signin-row{
+  width:700px !important;
+}
+.signin-background .Navbar{
+  width:100%;
+}
 .signin-background{
-  background:#FCFCFC;
-  height:720px;
+  top: 0;
+  left: 0;      
+  bottom: 0;      
+  right: 0;      
+  position: absolute;
+  background-color:#FCFCFC;
+  background-image: url('/img/frontdoor.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  
 }
 .signin-form{
 
@@ -244,8 +267,19 @@ color:white;
 color:#399bff;
 text-decoration: underline;
   }
-.details-page .Navbar{
-
+.loginSubmit{
+  border: 1px solid white !important;
+  border-radius:3px;
+}
+.loginSubmit:hover{
+  text-decoration: none !important;
+}
+.signupSubmit{
+  border: 1px solid white !important;
+  border-radius:3px;
+}
+.signupSubmit:hover{
+  text-decoration: none !important;
 }
 .details-page img{
   width: 665px;
