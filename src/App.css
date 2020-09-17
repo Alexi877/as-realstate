@@ -281,6 +281,9 @@ text-decoration: underline;
 .signupSubmit:hover{
   text-decoration: none !important;
 }
+.details-page .Navbar{
+  padding-right:0;
+}
 .details-page img{
   width: 665px;
   height:440px;
