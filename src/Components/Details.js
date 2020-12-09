@@ -16,6 +16,7 @@ class Details extends Component{
 			favoriteId: null
 		}
 	}
+	// Adds favorite to  favorites array and updates the UI.
 	setFavorite = (homeId) =>{
 		this.setState({
 			favorite:!this.state.favorite
@@ -24,6 +25,7 @@ class Details extends Component{
 		this.props.addFavorite(homeId)
 
 	}
+	//gets ID of homes to favorite so it can be sent to favorites array.
 	homeFavorited = (homeId)=>{
 		if(!this.state.favorite){
 			this.setState({
@@ -78,10 +80,12 @@ class Details extends Component{
 		)
 	}
 }
+//We get the state from redux so we can use it later on
 const mapStateToProps = (state) =>{
 	console.log(state);
 	return state
 }
+//These are the actions we are trying to dispatch in order to update the redux state.
 const mapDispatchToProps = {
 	addFavorite: addFavorite,
 	removeFavorite: removeFavorite

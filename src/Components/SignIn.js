@@ -3,11 +3,11 @@ import {Link} from 'react-router-dom';
 import Navbar from './Navbar';
 const SignIn = () => {
 	return(
-		<div className="signin-background img-fluid">
-		<div className="container-fluid signin-form">
-		 <div className="row">
-		 <div className="col-12">
-			 <Navbar/>
+<div className="signin-background img-fluid">
+ <div className="container-fluid signin-form">
+  <div className="row">
+   <div className="col-12">
+	<Navbar/>
 		 </div>
 		  <div className="col-12">
 		   <div className="inner-signin">
@@ -22,16 +22,18 @@ const SignIn = () => {
 		</div>
 		</form>
 		<div>
+		<Link to="/myaccount">
 		<button className="loginSubmit">Sign in</button>
+		</Link>
 		</div>
 		<label>Don't have an account?</label>
 		<Link to="/signup"><button>Signup</button>
 		</Link>
 		   </div>
-		  </div>
-		 </div>
-		 </div>
-		</div>
+   </div>
+  </div>
+ </div>
+</div>
 		)
 }
 export default SignIn;

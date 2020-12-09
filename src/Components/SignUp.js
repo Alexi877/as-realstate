@@ -28,7 +28,9 @@ const SignUp = () => {
 		</div>
 		</form>
 		<div>
+		<Link to="/myaccount">
 		<button className="signupSubmit">Sign up</button>
+		</Link>
 		</div>
 		<label>Back to </label>
 		<Link to="/signin"><button>Signin</button>

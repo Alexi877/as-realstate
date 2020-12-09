@@ -281,8 +281,29 @@ text-decoration: underline;
 .signupSubmit:hover{
   text-decoration: none !important;
 }
+.account-info p{
+  font-size:23px;
+}
+.account-info .account-options{
+  text-align: center;
+  font-size:19px;
+}
+.account-info .signin-message{
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.account-info .favorites-icon{
+  color:#FFCB05;
+}
+.account-info .settings-group{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.account-info .settings-icon{
+  color:grey;
+}
 .details-page .Navbar{
-  padding-right:0;
+  padding-right:7.5px;
 }
 .details-page img{
   width: 665px;
