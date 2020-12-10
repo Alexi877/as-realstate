@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import Navbar from './Navbar';
+import {connect} from 'react-redux';
+import Favorites from './Favorites';
 
 class AccountInfo extends Component {
     constructor(props) {
@@ -26,10 +28,21 @@ class AccountInfo extends Component {
                    <div className="settings">Settings</div>
                   </div>
                  </div>
-                  <div>Homes slide</div>
+                 <div className="options-display">
+                  <Favorites homes={this.props.homes} favorites={this.props.favorites}/>
+                 </div>
+                  <div className="homes-slide">Recommended Homes</div>
              </div>
             );
         }
 }
 
-export default AccountInfo;
+const mapStateToProps = (state) =>{
+    console.log(state);
+    return {
+        favorites: state.favorites,
+        homes:state.homes
+    }
+}
+
+export default connect(mapStateToProps)(AccountInfo);

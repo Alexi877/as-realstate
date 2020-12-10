@@ -292,15 +292,48 @@ text-decoration: underline;
 margin-top: 20px;
 margin-bottom: 20px;
 }
+.account-info .account-options{
+  overflow:hidden;
+  padding:10px 0px;
+}
+.account-info .favorites-group{
+  float:left;
+  margin-left:20px;
+}
+.account-info .favorites-group:hover{
+  text-decoration:underline 2px #F3B61F;
+  cursor:pointer;
+}
 .account-info .favorites-icon{
   color:#FFCB05;
 }
 .account-info .settings-group{
-  margin-top:20px;
-  margin-bottom:20px;
+  float:left;
+  margin-left:20px;
+}
+.account-info .settings-group:hover{
+  text-decoration:underline 2px #F3B61F;
+  cursor:pointer;
 }
 .account-info .settings-icon{
   color:grey;
+}
+.options-display{
+  padding: 10px 20px;
+}
+.current-favorites{
+  text-align:center;
+}
+.current-favorites .homecard{
+display:inline-block;
+border:none !important;
+margin:0px 30px !important;
+}
+.current-favorites .card-container:hover{
+  border:none !important;
+}
+.homes-slide{
+  text-align:center;
 }
 .details-page .Navbar{
   padding-right:7.5px;

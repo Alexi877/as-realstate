@@ -82,7 +82,7 @@ class Details extends Component{
 }
 //We get the state from redux so we can use it later on
 const mapStateToProps = (state) =>{
-	console.log(state);
+	console.log(state.homes);
 	return state
 }
 //These are the actions we are trying to dispatch in order to update the redux state.

@@ -3,7 +3,7 @@ import {ADD_FAVORITE, REMOVE_FAVORITE} from './actions';
 const initialState = {
     homes: Homes,
     filters: {},
-    favorites: []
+    favorites: [1, 4, 2]
 }
 
 function Home(state = initialState, action) {
