@@ -321,6 +321,12 @@ margin-bottom: 20px;
 .options-display{
   padding: 10px 20px;
 }
+.recommended-container{
+  padding-top:180px;
+}
+.recommended-container img{
+margin: 0px 10px !important;
+}
 .current-favorites{
   text-align:center;
 }

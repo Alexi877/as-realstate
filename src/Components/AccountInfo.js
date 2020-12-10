@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Navbar from './Navbar';
 import {connect} from 'react-redux';
 import Favorites from './Favorites';
+import Recommendedhomes from './Recommendedhomes';
 
 class AccountInfo extends Component {
     constructor(props) {
@@ -31,7 +32,7 @@ class AccountInfo extends Component {
                  <div className="options-display">
                   <Favorites homes={this.props.homes} favorites={this.props.favorites}/>
                  </div>
-                  <div className="homes-slide">Recommended Homes</div>
+                  <div className="homes-slide"><Recommendedhomes homes={this.props.homes} /></div>
              </div>
             );
         }
