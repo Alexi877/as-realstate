@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import {connect} from 'react-redux';
 import Favorites from './Favorites';
 import Recommendedhomes from './Recommendedhomes';
+import Settings from './Settings';
 
 class AccountInfo extends Component {
     constructor(props) {
@@ -30,7 +31,11 @@ class AccountInfo extends Component {
                   </div>
                  </div>
                  <div className="options-display">
-                  <Favorites homes={this.props.homes} favorites={this.props.favorites}/>
+                   {this.state.MyFavorites === 'on' ? 
+                   <Favorites homes={this.props.homes} favorites={this.props.favorites}/> : 
+                   <Settings /> }
+                  
+
                  </div>
                   <div className="homes-slide"><Recommendedhomes homes={this.props.homes} /></div>
              </div>
