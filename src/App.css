@@ -318,6 +318,30 @@ margin-bottom: 20px;
 .account-info .settings-icon{
   color:grey;
 }
+.Setting-outer{
+  text-align:center;
+}
+.Setting-outer .name-setting{
+   display:inline-block;
+}
+.Setting-outer .name-setting .name{
+  display:inline-block;
+}
+.Setting-outer .name-setting .edit-button{
+  display:inline-block;
+}
+.Setting-outer .birthday-setting .birthday{
+  display:inline-block;
+}
+.Setting-outer .birthday-setting .edit-button{
+  display:inline-block;
+}
+.Setting-outer .email-setting .email{
+  display:inline-block;
+}
+.Setting-outer .email-setting .edit-email{
+  display:inline-block;
+}
 .options-display{
   padding: 10px 20px;
 }

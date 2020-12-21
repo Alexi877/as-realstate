@@ -13,22 +13,22 @@ class Settings extends Component{
             <div className="Setting-outer">
              <div>
                  <div className="name-setting">
-                 <p>Name</p>
-                 <button>Edit Name</button>
+                 <p className="name" >Name</p>
+                 <button className="edit-button">Edit Name</button>
                  </div>
                 <div className="settings-name">Name goes here</div>
              </div>
              <div>
               <div className="birthday-setting">
-                 <p>Birthday</p>
-                 <button>Edit </button>
+                 <p className="birthday">Birthday</p>
+                 <button calssName="edit-button">Edit </button>
               </div>
               <div className="settings-birthday">BD goes here</div>
              </div>
              <div>
               <div className="email-setting">
-                 <p>Email</p>
-                 <button>Edit Name</button>
+                 <p className="email">Email</p>
+                 <button className="edit-email">Edit Name</button>
               </div>
               <div className="settings-email">Name goes here</div>
              </div>
